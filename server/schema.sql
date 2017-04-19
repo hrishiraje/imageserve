@@ -12,10 +12,10 @@ CREATE TABLE `users` (
 CREATE TABLE `images` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `id` (`id`)
 );
 
 /* Create other tables and define schemas for them here! */

@@ -26,8 +26,10 @@
     "mysql": "^2.13.0",
     "nodemon": "^1.11.0",
     "partials": "^0.1.0",
+    "path": "^0.12.7",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
     "request": "^2.81.0",
     "session": "^0.1.0",
     "shelljs": "^0.7.7"

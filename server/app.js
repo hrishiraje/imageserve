@@ -7,6 +7,7 @@ var bcrypt = require('bcrypt-nodejs');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var partials = require('express-partials');
+var path = require('path');
 
 
 // Create the express app
@@ -26,11 +27,13 @@ app.use(session({
   cookie: { maxAge: 60000 }
 }));
 
+app.use(express.static(path.join(__dirname, '../public')));
+
 // Set up routing
 app.use('/', router);
 
 // Server static files
-app.use(express.static(__dirname + '/../client/public'));
+// console.log(path.join(__dirname, '../public/index.html'));
 
 // If we are being run directly, run the server.
 if (!module.parent) {

@@ -1,24 +1,19 @@
 var models = require('../models/models');
 
 module.exports = {
-  login: {
+  home: {
     get: function(req, res) {
-      res
-        .status(200)
-        .render('login');
-    },
-    post: function(req, res) {
-      
-    }
-  },
-  signup: {
-    get: function(req, res) {
-      res
-        .status(200)
-        .render('signup');
-    },
-    post: function(req, res) {
-
+      models.home.get(function(err, data) {
+        if (err) {
+          res
+            .status(404)
+            .json(err);
+        } else {
+          res
+            .status(200)
+            .send(data);
+        }
+      });
     }
   }
 };
