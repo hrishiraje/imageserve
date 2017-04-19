@@ -5,6 +5,5 @@ var router = require('express').Router();
 
 router.get('/', controller.home.get);
 
-
 module.exports = router;
 

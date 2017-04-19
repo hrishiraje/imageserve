@@ -10084,6 +10084,7 @@ var ReactDOM = __webpack_require__(91);
 var App = __webpack_require__(90).App;
 
 $.get('localhost:3000', function (err, data) {
+  console.log('im requesting');
   if (err) {
     throw err;
   } else {

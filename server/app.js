@@ -19,13 +19,11 @@ app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
 app.use(cors());
 app.use(cookieParser());
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
 app.use(partials());
-app.use(session({
-  secret: 'keyboard cat',
-  cookie: { maxAge: 60000 }
-}));
+// app.use(session({
+//   secret: 'keyboard cat',
+//   cookie: { maxAge: 60000 }
+// }));
 
 app.use(express.static(path.join(__dirname, '../public')));
 
